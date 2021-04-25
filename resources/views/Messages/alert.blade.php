@@ -1,8 +1,10 @@
 
     @if ($errors->any())
-        <div class="alert alert-danger">
-            @foreach ($errors->all() as $error)
-                <span>{{ $error }}</span>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <?php $i=0;?>
+        @foreach ($errors->all() as $error)
+            <?php $i++; ?>
+                <strong>{{$i}}-{{ $error }}</strong> <br>
             @endforeach
         </div>
     @endif

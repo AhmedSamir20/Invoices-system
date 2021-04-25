@@ -30,4 +30,8 @@ Route::group(['namespace' => 'Section'],function (){
 });
 
 
+Route::group(['namespace' => 'Products'],function (){
+    route::resource('Products','ProductController');
+});
+
 Route::get('/{page}', 'AdminController@index');

@@ -32,9 +32,7 @@ class SectionController extends controller
 
     public function update(SectionRequest $request)
     {
-
        $Section=Section::findOrFail($request->id);
-
        $Section->update([
            'section_name' => $request->section_name,
            'description' => $request->description,
