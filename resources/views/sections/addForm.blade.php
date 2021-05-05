@@ -11,12 +11,12 @@
 
                     <div class="form-group">
                         <label for="exampleInputEmail1">اسم القسم</label>
-                        <input type="text" class="form-control" id="section_name" name="section_name">
+                        <input type="text" class="form-control"value="{{old('section_name')}}"  name="section_name">
                     </div>
 
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">ملاحظات</label>
-                        <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+                        <textarea class="form-control" id="description"  name="description" rows="3">{{old('description')}}</textarea>
                     </div>
 
                     <div class="modal-footer">

@@ -22,12 +22,14 @@
 
                     <label class="my-1 mr-2" for="inlineFormCustomSelectPref">القسم</label>
                     <select name="section_id"  class="mb-3 form-control" required>
-                        @foreach ($sections as $section)
-                        <option value="{{$section -> id }}"
-                            @if($section -> id == $product -> section_id) selected @endif >
-                       {{ $section->section_name }}</option>
-                        @endforeach
-
+                            @if($sections && $sections -> count() > 0)
+                                @foreach($sections as $section)
+                                    <option
+                                        value="{{$section-> id }}"
+                                        @if($section-> id == $product -> section_id) selected @endif
+                                    >{{$section -> section_name}}</option>
+                                @endforeach
+                            @endif
                     </select>
 
                     <div class="form-group">

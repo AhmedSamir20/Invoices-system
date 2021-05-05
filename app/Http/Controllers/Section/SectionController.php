@@ -36,7 +36,6 @@ class SectionController extends controller
        $Section->update([
            'section_name' => $request->section_name,
            'description' => $request->description,
-
        ]);
 
         session()->flash('edit','تم تعديل القسم بنجاج');

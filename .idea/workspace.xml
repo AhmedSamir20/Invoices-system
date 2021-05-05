@@ -3,10 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="eee51c4c-5122-41b3-85f5-a92d7a3447e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Invoices/InvoiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Invoices/InvoiceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Products/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Products/ProductController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Section/SectionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Section/SectionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Messages/alert.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Messages/alert.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Invoice.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Invoice.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_22_041943_create_invoices_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_22_041943_create_invoices_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Invoices/invoices.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Invoices/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Products/editForm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Products/editForm.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/footer-scripts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/footer-scripts.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/head.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/main-sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main-sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/sections/section.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/sections/section.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sections/addForm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/sections/addForm.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -158,21 +166,23 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/Products" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/Invoices" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\project\Mora\Invoices\resources\views\Invoices" />
       <recent name="E:\xamp\htdocs\Mora\Invoices\resources\views\Products" />
       <recent name="E:\xamp\htdocs\Mora\Invoices\resources\views\sections" />
       <recent name="E:\xamp\htdocs\Mora\Invoices\resources\views\Invoices" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\project\Mora\Invoices\resources\views\Invoices\Status Payment" />
+      <recent name="E:\xamp\htdocs\Mora\Invoices\resources\views\Invoices" />
       <recent name="E:\xamp\htdocs\Mora\Invoices\app\Http\Controllers\Products" />
       <recent name="E:\xamp\htdocs\Mora\Invoices\app\Http\Controllers\Section" />
       <recent name="E:\xamp\htdocs\Mora\Invoices\app\Http\Controllers\Invoices" />
-      <recent name="E:\xamp\htdocs\Mora\Invoices\app\Models" />
     </key>
   </component>
   <component name="RunManager">
@@ -194,7 +204,14 @@
       <workItem from="1619064250679" duration="6422000" />
       <workItem from="1619139131159" duration="2985000" />
       <workItem from="1619225155761" duration="16998000" />
-      <workItem from="1619304058495" duration="18853000" />
+      <workItem from="1619304058495" duration="19456000" />
+      <workItem from="1619417737182" duration="5827000" />
+      <workItem from="1619636741965" duration="7542000" />
+      <workItem from="1619847198214" duration="25167000" />
+      <workItem from="1619925027812" duration="13729000" />
+      <workItem from="1619946171641" duration="2159000" />
+      <workItem from="1619953127512" duration="5328000" />
+      <workItem from="1620192160256" duration="11994000" />
     </task>
     <servers />
   </component>

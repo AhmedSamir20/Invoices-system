@@ -15,9 +15,12 @@ class ProductController extends Controller
     {
 
 
-
         $data =[];
-        $data['products'] =Product::with('section')->get();
+        $data['products'] =Product::with(['section'=>function($q){
+            $q->select('id','section_name');
+        }])->get();
+
+
         $data['sections'] =Section::all();
         return view('Products.product',$data);
     }
@@ -27,8 +30,9 @@ class ProductController extends Controller
     {
         Product::create([
 
-            "Product_name"=>$request->Product_name,
+
             "section_id"=>$request->section_id,
+            "Product_name"=>$request->Product_name,
             "description"=>$request->description,
 
         ]);
