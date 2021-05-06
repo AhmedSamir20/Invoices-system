@@ -49,7 +49,7 @@
 
                                                 <table class="table table-striped" style="text-align:center">
                                                     <tbody>
-                                                    <tr>
+                                                    <tr>invoices
                                                         <th scope="row">رقم الفاتورة</th>
                                                         <td>{{ $invoices->invoice_number }}</td>
                                                         <th scope="row">تاريخ الاصدار</th>

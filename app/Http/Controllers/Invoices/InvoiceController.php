@@ -128,18 +128,29 @@ class InvoiceController extends Controller
         $invoices   = Invoice::where('id', $request->id)->first();
         $Attachment = Invoice_attachment::where('invoice_id', $request->id)->first();
         $Details    = Invoice_detail::where('id_Invoice', $request->id)->first();
+        $id_page=$request->id_page;
+        if (!$id_page==2) {
 
-        if (!empty($Attachment->invoice_number)) {
+            if (!empty($Attachment->invoice_number)) {
 
-            Storage::disk('public_uploads')->deleteDirectory($Attachment->invoice_number);
+                Storage::disk('public_uploads')->deleteDirectory($Attachment->invoice_number);
+            }
+
+            $invoices->forceDelete();
+            $Attachment->forceDelete();
+            $Details->forceDelete();
+            session()->flash('delete', 'تم حذف الفتوره بنجاح');
+            return redirect()->route('invoices.index');
+        }
+        else{
+
+            $invoices->delete();
+
+            session()->flash('add', 'تم ارشفه الفتوره بنجاح');
+            return redirect()->route('Archive.index');
         }
 
-        $invoices->forceDelete();
-        $Attachment->forceDelete();
-        $Details->forceDelete();
 
-        session()->flash('delete', 'تم حذف المرفق بنجاح');
-        return redirect()->route('invoices.index');
     }
 
     //Get products by AJAX

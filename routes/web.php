@@ -47,6 +47,14 @@ Route::group(['namespace' => 'Invoices'],function (){
     Route::get('Invoice_Partial','InvoiceController@Invoice_Partial')->name('Invoice_Partial');
     Route::get('Print_invoice/{id}','InvoiceController@Print_invoice');
 
+
+
+    Route::get('Archive','InvoiceArchiveController@index')->name('Archive.index');
+    Route::post('Archive/update/{id}','InvoiceArchiveController@ReturnFromArchive')->name('Archive.update');
+    Route::delete('Archive/delete/{id}','InvoiceArchiveController@DeleteFromArchive')->name('Archive.delete');
+
+
+
 });
 
 

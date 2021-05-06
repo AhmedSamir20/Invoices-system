@@ -33,6 +33,7 @@
 							<li><a class="slide-item" href="{{ route('Invoice_Paid') }}">الفواتير المدفعه</a></li>
 							<li><a class="slide-item" href="{{ route('Invoice_UnPaid') }}">الفواتير غير المدفعه</a></li>
 							<li><a class="slide-item" href="{{ route('Invoice_Partial') }}">الفواتير المدفعه جزئيا</a></li>
+                            <li><a class="slide-item" href="{{ route('Archive.index') }}">ارشيف الفواتير</a></li>
 						</ul>
 					</li>
 

@@ -3,6 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="eee51c4c-5122-41b3-85f5-a92d7a3447e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Invoices/InvoiceAchiveController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Invoices/InvoiceArchiveController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Invoices/InvoiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Invoices/InvoiceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Invoice.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Invoice.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Invoices/details_invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Invoices/details_invoice.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Invoices/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Invoices/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/main-sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main-sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,12 +160,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/Invoices" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/Invoices/Archive" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\project\Mora\Invoices\resources\views\Invoices\Archive" />
       <recent name="F:\project\Mora\Invoices\resources\views\Invoices" />
       <recent name="E:\xamp\htdocs\Mora\Invoices\resources\views\Products" />
       <recent name="E:\xamp\htdocs\Mora\Invoices\resources\views\sections" />
@@ -198,7 +206,8 @@
       <workItem from="1619925027812" duration="13729000" />
       <workItem from="1619946171641" duration="2159000" />
       <workItem from="1619953127512" duration="5328000" />
-      <workItem from="1620192160256" duration="12761000" />
+      <workItem from="1620192160256" duration="14800000" />
+      <workItem from="1620278095953" duration="7622000" />
     </task>
     <servers />
   </component>
