@@ -21,7 +21,7 @@
 @endsection
 @section('content')
 
-@include('Messages.alert');
+@include('Messages.alert')
 
     <!-- row -->
     <div class="row">

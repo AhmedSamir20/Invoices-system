@@ -18,7 +18,7 @@
 @stop
 @section('content')
 
-    @include('Messages.alert');
+    @include('Messages.alert')
     <!-- row opened -->
     <div class="row row-sm">
 
@@ -26,11 +26,15 @@
         <div class="col-xl-12">
             <div class="card mg-b-20">
                 <div class="card-header pb-0">
-                    <div class="d-flex justify-content-between">
-                        <a href="invoices/create" class="modal-effect btn btn-group-lg btn-primary" style="color:white"><i
-                                class="fas fa-plus"></i>&nbsp; اضافة فاتورة</a>
+                    @can('اضافة فاتورة')
+                        <a href="invoices/create" class="modal-effect btn btn-group-lg btn-primary" style="color:white">
+                            <i class="fas fa-plus"></i>&nbsp; اضافة فاتورة</a>
+                    @endcan
+                    @can('تصدير EXCEL')
+                        <a class="modal-effect btn btn-group-lg btn-success" href="{{ route('invoice.export') }}"
+                           style="color:white"><i class="fas fa-file-download"></i>&nbsp;تصدير اكسيل</a>
+                    @endcan
 
-                    </div>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -63,8 +67,8 @@
                                     <td>{{ $invoice->invoice_Date }}</td>
                                     <td>{{ $invoice->Due_date }}</td>
                                     <td>{{ $invoice->product }}</td>
-                                    <td><a
-                                            href="{{ url('InvoicesDetails') }}/{{ $invoice->id }}">{{ $invoice->section->section_name }}</a>
+                                    <td>
+                                        <a href="{{ url('InvoicesDetails') }}/{{ $invoice->id }}">{{ $invoice->section->section_name }}</a>
                                     </td>
                                     <td>{{ $invoice->Discount }}</td>
                                     <td>{{ $invoice->Rate_VAT }}</td>
@@ -78,44 +82,55 @@
                                         @else
                                             <span class="text-warning">{{ $invoice->Status }}</span>
                                         @endif
-
                                     </td>
-
                                     <td>{{ $invoice->note }}</td>
-
                                     <td>
                                         <div class="dropdown">
                                             <button aria-expanded="false" aria-haspopup="true"
                                                     class="btn ripple btn-primary btn-sm" data-toggle="dropdown"
-                                                    type="button"> العمليات<i class="fas fa-caret-down ml-1"></i></button>
+                                                    type="button"> العمليات<i class="fas fa-caret-down ml-1"></i>
+                                            </button>
                                             <div class="dropdown-menu tx-13">
-
+                                                @can('تعديل الفاتورة')
                                                     <a class="dropdown-item"
                                                        href="{{route('invoices.edit',$invoice->id)}}">تعديل الفاتورة</a>
-
-
-                                                <a class=" modal-effect dropdown-item" href="#delete{{$invoice->id}}"
-                                                   data-toggle="modal" data-effect="effect-scale"><i
-                                                        class="text-danger fas fa-trash-alt"></i>&nbsp;&nbsp;حذف
-                                                    الفاتورة</a>
-
-                                                <a class="dropdown-item" href="{{route('Status_Show',$invoice->id)}}">
-                                                    <i class=" text-success fas fa-money-bill"></i>&nbsp;&nbsp;تغير حالة الدفع</a>
-
-                                                <a class="modal-effect dropdown-item" href="#archive{{ $invoice->id}}"
-                                                   data-toggle="modal" data-effect="effect-scale">
-                                                    <i class="text-warning fas fa-exchange-alt"></i>&nbsp;&nbsp;نقل الي الارشيف</a>
-
-
+                                                @endcan
+                                                @can('حذف الفاتورة')
+                                                        <a class=" modal-effect dropdown-item"
+                                                           href="#delete{{$invoice->id}}"
+                                                           data-toggle="modal" data-effect="effect-scale">
+                                                            <i class="text-danger fas fa-trash-alt"></i>&nbsp;&nbsp;حذف
+                                                            الفاتورة</a>
+                                                @endcan
+                                                @can('تغير حالة الدفع')
+                                                            <a class="dropdown-item"
+                                                               href="{{route('Status_Show',$invoice->id)}}">
+                                                                <i class=" text-success fas fa-money-bill"></i>&nbsp;&nbsp;تغير
+                                                                حالة الدفع</a>
+                                                @endcan
+                                                @can('ارشفة الفاتورة')
+                                                                <a class="modal-effect dropdown-item"
+                                                                   href="#archive{{ $invoice->id}}"
+                                                                   data-toggle="modal" data-effect="effect-scale">
+                                                                    <i class="text-warning fas fa-exchange-alt"></i>&nbsp;&nbsp;نقل
+                                                                    الي الارشيف</a>
+                                                @endcan
+                                                @can('طباعةالفاتورة')
+                                                                    <a class=" dropdown-item"
+                                                                       href="{{route('Invoice_Print',$invoice->id)}}"><i
+                                                                            class="text-success fas fa-print"></i>&nbsp;&nbsp;طباعة
+                                                                        الفاتورة
+                                                                    </a>
+                                                    @endcan
                                             </div>
                                         </div>
 
                                     </td>
-                            </tr>
+                                </tr>
                                 <!-- Delete Invoice -->
                                 @include('Invoices.delete-Invoices')
+                                <!-- Archive Invoice -->
                                 @include('Invoices.Archive.modalArchive')
-
                             @endforeach
                             </tbody>
                         </table>
@@ -124,8 +139,6 @@
             </div>
         </div>
         <!--/div-->
-
-
     </div>
     <!-- row closed -->
     </div>

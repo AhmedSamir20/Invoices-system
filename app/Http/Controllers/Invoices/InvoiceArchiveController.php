@@ -18,7 +18,8 @@ class InvoiceArchiveController extends Controller
     {
         $invoice = Invoice::withTrashed()->where('id',$request->id);
         $invoice->restore();
-        session()->flash('add', 'تم الغاء الارشفه بنجاح');
+
+        session()->flash('restore_invoice');
         return redirect()->route('invoices.index');
     }
 
@@ -26,7 +27,7 @@ class InvoiceArchiveController extends Controller
     {
         $invoices = Invoice::withTrashed()->where('id',$request->id)->first();
         $invoices->forceDelete();
-        session()->flash('delete', 'تم الحذف بنجاح');
+        session()->flash('delete');
         return redirect()->route('Archive.index');
     }
 }

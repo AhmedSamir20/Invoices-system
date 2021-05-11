@@ -10,6 +10,12 @@ use Illuminate\Http\Request;
 
 class SectionController extends controller
 {
+    function __construct()
+    {
+        $this->middleware('permission:اضافة قسم', ['only' => ['create','store']]);
+        $this->middleware('permission:تعديل قسم', ['only' => ['edit','update']]);
+        $this->middleware('permission:حذف قسم', ['only' => ['destroy']]);
+    }
 
     public function index()
     {

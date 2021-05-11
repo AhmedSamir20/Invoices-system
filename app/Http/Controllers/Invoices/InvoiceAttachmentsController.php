@@ -32,7 +32,7 @@ class InvoiceAttachmentsController extends Controller
         $imageName = $request->file_name->getClientOriginalName();
         $request->file_name->move(public_path('Attachments/'. $request->invoice_number), $imageName);
 
-        session()->flash('Add', 'تم اضافة المرفق بنجاح');
+        session()->flash('add_attachment');
         return back();
 
     }

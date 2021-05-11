@@ -2,12 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eee51c4c-5122-41b3-85f5-a92d7a3447e3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Invoices.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Invoices.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Invoices/InvoiceAchiveController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Invoices/InvoiceArchiveController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Invoices/InvoiceArchiveController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Invoices/InvoiceArchiveController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Invoices/InvoiceAttachmentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Invoices/InvoiceAttachmentsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Invoices/InvoiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Invoices/InvoiceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Invoice.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Invoice.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Invoices/InvoicesDetailsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Invoices/InvoicesDetailsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Products/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Products/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Section/SectionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Section/SectionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Invoices/Archive/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Invoices/Archive/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Invoices/Paid-invoices/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Invoices/Paid-invoices/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Invoices/Prat-paid-Invoices/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Invoices/Prat-paid-Invoices/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Invoices/Status-Payment/Update-status.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Invoices/Status-Payment/Update-status.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Invoices/Unpaid-Invoices/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Invoices/Unpaid-Invoices/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Invoices/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Invoices/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Invoices/details_invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Invoices/details_invoice.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Invoices/edit_invoices.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Invoices/edit_invoices.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Invoices/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Invoices/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Messages/alert.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Messages/alert.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/footer-scripts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/footer-scripts.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/head.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/main-sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main-sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -138,6 +162,17 @@
       <path value="$PROJECT_DIR$/vendor/filp/whoops" />
       <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/ezyang/htmlpurifier" />
+      <path value="$PROJECT_DIR$/vendor/maennchen/zipstream-php" />
+      <path value="$PROJECT_DIR$/vendor/markbaker/matrix" />
+      <path value="$PROJECT_DIR$/vendor/markbaker/complex" />
+      <path value="$PROJECT_DIR$/vendor/maatwebsite/excel" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/php-enum" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-permission" />
+      <path value="$PROJECT_DIR$/vendor/laravelcollective/html" />
     </include_path>
   </component>
   <component name="ProblemsViewState">
@@ -160,17 +195,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/Invoices/Archive" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/Roles" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\project\Mora\Invoices\resources\views\Roles" />
+      <recent name="F:\project\Mora\Invoices\app\Http\Requests" />
       <recent name="F:\project\Mora\Invoices\resources\views\Invoices\Archive" />
       <recent name="F:\project\Mora\Invoices\resources\views\Invoices" />
       <recent name="E:\xamp\htdocs\Mora\Invoices\resources\views\Products" />
-      <recent name="E:\xamp\htdocs\Mora\Invoices\resources\views\sections" />
-      <recent name="E:\xamp\htdocs\Mora\Invoices\resources\views\Invoices" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\project\Mora\Invoices\resources\views\Invoices\Status Payment" />
@@ -207,11 +242,29 @@
       <workItem from="1619946171641" duration="2159000" />
       <workItem from="1619953127512" duration="5328000" />
       <workItem from="1620192160256" duration="14800000" />
-      <workItem from="1620278095953" duration="7622000" />
+      <workItem from="1620278095953" duration="17427000" />
+      <workItem from="1620303944775" duration="6512000" />
+      <workItem from="1620388620926" duration="11974000" />
+      <workItem from="1620430600012" duration="3731000" />
+      <workItem from="1620539534331" duration="3904000" />
+      <workItem from="1620588021912" duration="778000" />
+      <workItem from="1620601564432" duration="16329000" />
+      <workItem from="1620701905278" duration="270000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/Invoices/index.blade.php</url>
+          <line>98</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

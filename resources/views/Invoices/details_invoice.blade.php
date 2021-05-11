@@ -18,7 +18,7 @@
     <!-- breadcrumb -->
 @endsection
 @section('content')
-@include('Messages.alert');
+    @include('Messages.alert')
     <!-- row opened -->
     <div class="row row-sm">
 

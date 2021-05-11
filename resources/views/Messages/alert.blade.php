@@ -1,37 +1,123 @@
-
-    @if ($errors->any())
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <?php $i=0;?>
-        @foreach ($errors->all() as $error)
-            <?php $i++; ?>
-                <strong>{{$i}}-{{ $error }}</strong> <br>
-            @endforeach
+    @if (count($errors) > 0)
+        <div class="alert alert-danger">
+            <button aria-label="Close" class="close" data-dismiss="alert" type="button">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <strong>خطا</strong>
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
         </div>
     @endif
 
-    @if (session()->has('Add'))
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            <strong>{{ session()->get('Add') }}</strong>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
+
+    @if (session()->has('add'))
+        <script>
+            window.onload = function() {
+                notif({
+                    msg: "تم اضافة الفاتورة بنجاح",
+                    type: "success"
+                });
+            }
+
+        </script>
+    @endif
+
+    @if (session()->has('restore_invoice'))
+        <script>
+            window.onload = function() {
+                notif({
+                    msg: "تم استعادة الفاتورة بنجاح",
+                    type: "success"
+                })
+            }
+
+        </script>
+    @endif
+
+
+    @if (session()->has('delete_invoice'))
+        <script>
+            window.onload = function() {
+                notif({
+                    msg: "تم حذف الفاتورة بنجاح",
+                    type: "success"
+                })
+            }
+
+        </script>
+    @endif
+
+
+    @if (session()->has('Status_Update'))
+        <script>
+            window.onload = function() {
+                notif({
+                    msg: "تم تحديث حالة الدفع بنجاح",
+                    type: "success"
+                })
+            }
+
+        </script>
+    @endif
+
+    @if (session()->has('restore_invoice'))
+        <script>
+            window.onload = function() {
+                notif({
+                    msg: "تم استعادة الفاتورة بنجاح",
+                    type: "success"
+                })
+            }
+
+        </script>
+    @endif
+
+    @if (session()->has('archive_invoice'))
+        <script>
+            window.onload = function() {
+                notif({
+                    msg: "تم ارشفه الفتوره بنجاح",
+                    type: "success"
+                })
+            }
+
+        </script>
+    @endif
+    @if (session()->has('add_attachment'))
+        <script>
+            window.onload = function() {
+                notif({
+                    msg: "تم اضافة المرفق بنجاح",
+                    type: "success"
+                })
+            }
+
+        </script>
+    @endif
+
+
+    @if (session()->has('edit'))
+        <script>
+            window.onload = function() {
+                notif({
+                    msg: "تم تعديل الفاتورة بنجاح",
+                    type: "success"
+                });
+            }
+        </script>
     @endif
 
     @if (session()->has('delete'))
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <strong>{{ session()->get('delete') }}</strong>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-    @endif
+        <script>
+            window.onload = function() {
+                notif({
+                    msg: "تم الحذف بنجاح",
+                    type: "success"
+                });
+            }
 
-    @if (session()->has('edit'))
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            <strong>{{ session()->get('edit') }}</strong>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
+        </script>
     @endif

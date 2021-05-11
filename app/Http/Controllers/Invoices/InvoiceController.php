@@ -3,17 +3,40 @@
 namespace App\Http\Controllers\Invoices;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\InvoicesRequest;
 use App\Models\Invoice;
 use App\Models\Invoice_attachment;
 use App\Models\Invoice_detail;
 use App\Models\Section;
+use App\Notifications\AddInvoice;
+use App\User;
 use Auth;
 use DB;
 use Illuminate\Http\Request;
-use Storage;
 
+use Notification;
+use Storage;
+use App\Exports\InvoicesExport;
+use Maatwebsite\Excel\Facades\Excel;
 class InvoiceController extends Controller
 {
+
+
+    function __construct()
+    {
+        $this->middleware('permission:قائمة الفواتير', ['only' => ['index']]);
+        $this->middleware('permission:اضافة فاتورة', ['only' => ['create','store']]);
+        $this->middleware('permission:تعديل الفاتورة', ['only' => ['edit','update']]);
+        $this->middleware('permission:حذف الفاتورة', ['only' => ['destroy']]);
+        $this->middleware('permission:تصدير EXCEL', ['only' => ['export']]);
+        $this->middleware('permission:طباعةالفاتورة', ['only' => ['Invoice_Print']]);
+        $this->middleware('permission:الفواتير المدفوعة جزئيا', ['only' => ['Invoice_Partial']]);
+        $this->middleware('permission:الفواتير الغير مدفوعة', ['only' => ['Invoice_UnPaid']]);
+        $this->middleware('permission:الفواتير المدفوعة', ['only' => ['Invoice_Paid']]);
+        $this->middleware('permission:تغير حالة الدفع', ['only' => ['Status_Update','show']]);
+    }
+
+
 
     public function index()
     {
@@ -30,7 +53,7 @@ class InvoiceController extends Controller
     }
 
 
-    public function store(Request $request)
+    public function store(InvoicesRequest $request)
     {
 
         Invoice::create([
@@ -82,13 +105,16 @@ class InvoiceController extends Controller
             $imageName = $request->pic->getClientOriginalName();
             $request->pic->move(public_path('Attachments/' . $invoice_number), $imageName);
         }
+        //send mail
+         $user = User::first();
+         Notification::send($user, new AddInvoice($invoice_id));
 
-        session()->flash('Add', 'تم اضافة الفاتورة بنجاح');
+        session()->flash('Add');
         return redirect()->route('invoices.index');
 
     }
 
-
+//========================edit invoices======================
     public function edit($id)
     {
         $data = [];
@@ -98,7 +124,7 @@ class InvoiceController extends Controller
 
     }
 
-    public function update(Request $request)
+    public function update(InvoicesRequest $request)
     {
 
         $invoices = Invoice::findOrFail($request->invoice_id);
@@ -117,7 +143,7 @@ class InvoiceController extends Controller
             'note'              => $request->note,
         ]);
 
-        session()->flash('edit', 'تم تعديل الفاتورة بنجاح');
+        session()->flash('edit');
         return redirect()->route('invoices.index');
     }
 
@@ -139,14 +165,13 @@ class InvoiceController extends Controller
             $invoices->forceDelete();
             $Attachment->forceDelete();
             $Details->forceDelete();
-            session()->flash('delete', 'تم حذف الفتوره بنجاح');
+            session()->flash('delete');
             return redirect()->route('invoices.index');
         }
         else{
-
+            //make Soft Delete
             $invoices->delete();
-
-            session()->flash('add', 'تم ارشفه الفتوره بنجاح');
+            session()->flash('archive_invoice');
             return redirect()->route('Archive.index');
         }
 
@@ -165,7 +190,6 @@ class InvoiceController extends Controller
     public function show($id)
     {
         $invoices = Invoice::where('id', $id)->first();
-
         return view('Invoices.Status-Payment.Update-status', compact('invoices'));
     }
 
@@ -212,7 +236,7 @@ class InvoiceController extends Controller
             ]);
         }
         session()->flash('Status_Update');
-        return redirect('/invoices');
+        return redirect()->route('invoices.index');
     }
 
     public function Invoice_Paid()
@@ -235,6 +259,18 @@ class InvoiceController extends Controller
         $invoices=Invoice::where('Value_Status',3)->get();
 
         return view('Invoices.Prat-paid-Invoices.index',compact('invoices'));
+    }
+
+    public function Invoice_Print($id)
+    {
+        $invoices=Invoice::where('id',$id)->first();
+        return view('Invoices.Print-invoice.index',compact('invoices'));
+
+    }
+
+    public function export()
+    {
+        return Excel::download(new InvoicesExport, 'invoices.xlsx');
     }
 
 }

@@ -18,6 +18,7 @@
     <!-- breadcrumb -->
 @endsection
 @section('content')
+    @include('Messages.alert')
     <!-- row -->
     <div class="row">
         <div class="col-lg-12 col-md-12">
@@ -136,7 +137,7 @@
                         <div class="row">
                             <div class="col">
                                 <label for="exampleTextarea">حالة الدفع</label>
-                                <select class="form-control" id="Status" name="Status" required>
+                                <select class="form-control"  name="Status" required>
                                     <option selected="true" disabled="disabled">-- حدد حالة الدفع --</option>
                                     <option value="مدفوعة">مدفوعة</option>
                                     <option value="مدفوعة جزئيا">مدفوعة جزئيا</option>

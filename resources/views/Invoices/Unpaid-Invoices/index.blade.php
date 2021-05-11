@@ -29,8 +29,10 @@
             <div class="card mg-b-20">
                 <div class="card-header pb-0">
                     <div class="d-flex justify-content-between">
-                        <a href="invoices/create" class="modal-effect btn btn-sm btn-primary" style="color:white"><i
+                        @can('اضافة فاتورة')
+                        <a href="{{route('invoices.create')}}" class="modal-effect btn btn-sm btn-primary" style="color:white"><i
                                 class="fas fa-plus"></i>&nbsp; اضافة فاتورة</a>
+                        @endcan
                     </div>
                 </div>
                 <div class="card-body">
@@ -89,31 +91,57 @@
                                         <td>
                                             <div class="dropdown">
                                                 <button aria-expanded="false" aria-haspopup="true"
-                                                    class="btn ripple btn-primary btn-sm" data-toggle="dropdown"
-                                                    type="button">العمليات<i class="fas fa-caret-down ml-1"></i></button>
+                                                        class="btn ripple btn-primary btn-sm" data-toggle="dropdown"
+                                                        type="button">العمليات<i class="fas fa-caret-down ml-1"></i>
+                                                </button>
                                                 <div class="dropdown-menu tx-13">
-                                                    <a class="dropdown-item"
-                                                        href=" {{ url('edit_invoice') }}/{{ $invoice->id }}">تعديل
-                                                        الفاتورة</a>
 
-                                                    <a class="dropdown-item" href="#" data-invoice_id="{{ $invoice->id }}"
-                                                        data-toggle="modal" data-target="#delete_invoice"><i
-                                                            class="text-danger fas fa-trash-alt"></i>&nbsp;&nbsp;حذف  الفاتورة</a>
+                                                    @can('تعديل الفاتورة')
+                                                        <a class="dropdown-item"
+                                                           href="{{route('invoices.edit',$invoice->id)}}">تعديل الفاتورة</a>
+                                                    @endcan
 
 
-                                                    <a class="dropdown-item" href="{{ route('Status_Show',$invoice->id) }}"><i
-                                                            class=" text-success fas fa-money-bill"></i>&nbsp;&nbsp;تغير حالة الدفع</a>
+                                                    @can('حذف الفاتورة')
+                                                        <a class=" modal-effect dropdown-item"
+                                                           href="#delete{{$invoice->id}}"
+                                                           data-toggle="modal" data-effect="effect-scale">
+                                                            <i class="text-danger fas fa-trash-alt"></i>&nbsp;&nbsp;حذف
+                                                            الفاتورة</a>
+                                                    @endcan
 
 
-                                                    <a class="dropdown-item" href="#" data-invoice_id="{{ $invoice->id }}"
-                                                        data-toggle="modal" data-target="#Transfer_invoice"><i class="text-warning fas fa-exchange-alt"></i>&nbsp;&nbsp;نقل الي الارشيف</a>
+                                                    @can('تغير حالة الدفع')
+                                                        <a class="dropdown-item"
+                                                           href="{{route('Status_Show',$invoice->id)}}">
+                                                            <i class=" text-success fas fa-money-bill"></i>&nbsp;&nbsp;تغير
+                                                            حالة الدفع</a>
+                                                    @endcan
 
-
+                                                    @can('ارشفة الفاتورة')
+                                                        <a class="modal-effect dropdown-item"
+                                                           href="#archive{{ $invoice->id}}"
+                                                           data-toggle="modal" data-effect="effect-scale">
+                                                            <i class="text-warning fas fa-exchange-alt"></i>&nbsp;&nbsp;نقل
+                                                            الي الارشيف</a>
+                                                    @endcan
+                                                    @can('طباعةالفاتورة')
+                                                        <a class=" dropdown-item"
+                                                           href="{{route('Invoice_Print',$invoice->id)}}"><i
+                                                                class="text-success fas fa-print"></i>&nbsp;&nbsp;طباعة
+                                                            الفاتورة
+                                                        </a>
+                                                    @endcan
                                                 </div>
                                             </div>
 
                                         </td>
                                     </tr>
+
+                                    <!-- Delete Invoice -->
+                                    @include('Invoices.delete-Invoices')
+                                    <!-- Archive Invoice -->
+                                    @include('Invoices.Archive.modalArchive')
                                 @endforeach
 
                             </tbody>
@@ -125,62 +153,7 @@
         <!--/div-->
     </div>
 
-    <!-- حذف الفاتورة -->
-    <div class="modal fade" id="delete_invoice" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">حذف الفاتورة</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <form action="{{ route('invoices.destroy', 'test') }}" method="post">
-                        {{ method_field('delete') }}
-                        {{ csrf_field() }}
-                </div>
-                <div class="modal-body">
-                    هل انت متاكد من عملية الحذف ؟
-                    <input type="hidden" name="invoice_id" id="invoice_id" value="">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">الغاء</button>
-                    <button type="submit" class="btn btn-danger">تاكيد</button>
-                </div>
-                </form>
-            </div>
-        </div>
-    </div>
 
-
-    <!-- ارشيف الفاتورة -->
-    <div class="modal fade" id="Transfer_invoice" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">ارشفة الفاتورة</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <form action="{{ route('invoices.destroy', 'test') }}" method="post">
-                        {{ method_field('delete') }}
-                        {{ csrf_field() }}
-                </div>
-                <div class="modal-body">
-                    هل انت متاكد من عملية الارشفة ؟
-                    <input type="hidden" name="invoice_id" id="invoice_id" value="">
-                    <input type="hidden" name="id_page" id="id_page" value="2">
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">الغاء</button>
-                    <button type="submit" class="btn btn-success">تاكيد</button>
-                </div>
-                </form>
-            </div>
-        </div>
-    </div>
 
     </div>
     <!-- row closed -->

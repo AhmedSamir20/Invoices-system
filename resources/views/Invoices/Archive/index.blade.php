@@ -3,6 +3,7 @@
     ارشيف الفواتير
 @stop
 @section('css')
+
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
@@ -19,7 +20,7 @@
 @endsection
 @section('content')
 
-   @include('Messages.alert');
+    @include('Messages.alert');
     <!-- row -->
     <div class="row">
         <!--div-->
@@ -130,4 +131,7 @@
     <!-- main-content closed -->
 @endsection
 @section('js')
+    <!--Internal  Notify js -->
+    <script src="{{ URL::asset('assets/plugins/notify/js/notifIt.js') }}"></script>
+    <script src="{{ URL::asset('assets/plugins/notify/js/notifit-custom.js') }}"></script>
 @endsection
