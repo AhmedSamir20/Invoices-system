@@ -87,10 +87,10 @@
                         <span class="side-menu__label">التقارير</span><i class="angle fe fe-chevron-down"></i></a>
                     <ul class="slide-menu">
                         @can('تقرير الفواتير')
-                            <li><a class="slide-item" href="">تقارير الفواتير</a></li>
+                            <li><a class="slide-item" href="{{route('report.index')}}">تقارير الفواتير</a></li>
                         @endcan
                         @can('تقرير العملاء')
-                            <li><a class="slide-item" href="">تقارير العملاء</a></li>
+                            <li><a class="slide-item" href="{{route('customer.index')}}">تقارير العملاء</a></li>
 
                         @endcan
                     </ul>

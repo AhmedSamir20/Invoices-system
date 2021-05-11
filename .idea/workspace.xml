@@ -2,36 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eee51c4c-5122-41b3-85f5-a92d7a3447e3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Invoices.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Invoices.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Invoices/InvoiceArchiveController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Invoices/InvoiceArchiveController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Invoices/InvoiceAttachmentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Invoices/InvoiceAttachmentsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Invoices/InvoiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Invoices/InvoiceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Invoices/InvoicesDetailsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Invoices/InvoicesDetailsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Products/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Products/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Section/SectionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Section/SectionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Invoices/Archive/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Invoices/Archive/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Invoices/Paid-invoices/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Invoices/Paid-invoices/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Invoices/Prat-paid-Invoices/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Invoices/Prat-paid-Invoices/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Invoices/Status-Payment/Update-status.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Invoices/Status-Payment/Update-status.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Invoices/Unpaid-Invoices/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Invoices/Unpaid-Invoices/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Invoices/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Invoices/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Invoices/details_invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Invoices/details_invoice.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Invoices/edit_invoices.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Invoices/edit_invoices.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Invoices/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Invoices/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Messages/alert.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Messages/alert.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/footer-scripts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/footer-scripts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/head.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/faces/6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/img/faces/6.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/main-sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main-sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -208,11 +180,11 @@
       <recent name="E:\xamp\htdocs\Mora\Invoices\resources\views\Products" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\project\Mora\Invoices\app\Http\Controllers\Reports" />
       <recent name="F:\project\Mora\Invoices\resources\views\Invoices\Status Payment" />
       <recent name="E:\xamp\htdocs\Mora\Invoices\resources\views\Invoices" />
       <recent name="E:\xamp\htdocs\Mora\Invoices\app\Http\Controllers\Products" />
       <recent name="E:\xamp\htdocs\Mora\Invoices\app\Http\Controllers\Section" />
-      <recent name="E:\xamp\htdocs\Mora\Invoices\app\Http\Controllers\Invoices" />
     </key>
   </component>
   <component name="RunManager">
@@ -249,7 +221,7 @@
       <workItem from="1620539534331" duration="3904000" />
       <workItem from="1620588021912" duration="778000" />
       <workItem from="1620601564432" duration="16329000" />
-      <workItem from="1620701905278" duration="270000" />
+      <workItem from="1620701905278" duration="9924000" />
     </task>
     <servers />
   </component>

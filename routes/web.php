@@ -82,4 +82,15 @@ Route::group(['middleware' => ['auth'],'namespace' => 'User'], function() {
     Route::resource('users','UserController');
 });
 
+
+//=======================Route Report=======================
+Route::group(['middleware' => ['auth'],'prefix' => 'invoice', 'namespace' => 'Reports'], function() {
+    Route::get('/reports','invoicesReportController@index')->name('report.index');
+    Route::post('/Search','invoicesReportController@searchInvoices')->name('search.invoices');
+
+
+
+    Route::get('/customer','CustomersReportController@index')->name('customer.index');
+    Route::post('/customer/Search','CustomersReportController@searchInvoices')->name('search.customer');
+});
 Route::get('/{page}', 'AdminController@index');
