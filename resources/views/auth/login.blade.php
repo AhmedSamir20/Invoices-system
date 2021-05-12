@@ -19,10 +19,17 @@
                         <div class="row">
                             <div class="col-md-10 col-lg-10 col-xl-9 mx-auto">
                                 <div class="card-sigin">
-                                    <div class="mb-5 d-flex"> <a href="{{ url('/' . $page='Home') }}"><img src="{{URL::asset('assets/img/brand/favicon.png')}}" class="sign-favicon ht-40" alt="logo"></a><h1 class="main-logo1 ml-1 mr-0 my-auto tx-28">Mora<span>So</span>ft</h1></div>
+                                    <div class="mb-3 d-flex">
+
+                                        <a href="{{ url('/' . $page='Home') }}">
+                                            <img src="{{URL::asset('assets/img/brand/favicon.png')}}" class="sign-favicon ht-40" alt="logo">
+                                        </a>
+
+                                        <h1 class="main-logo1  mr-0 my-auto tx-26" style="font-family: Cairo">برنامج الفواتير</h1>
+                                    </div>
                                     <div class="card-sigin">
                                         <div class="main-signup-header">
-                                            <h2>مرحبا بك</h2>
+                                            <h2>مرحبا بعودتك مره أخري</h2><br>
                                             <h5 class="font-weight-semibold mb-4"> تسجيل الدخول</h5>
                                             <form method="POST" action="{{ route('login') }}">
                                                 @csrf
