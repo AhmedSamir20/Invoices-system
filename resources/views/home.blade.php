@@ -78,7 +78,7 @@
                                            echo $count_invoices2 = 0;
                                         }
                                         else{
-                                           echo $count_invoices2 = $count_invoices2 / $count_all *100;
+                                           echo round( $count_invoices2 / $count_all *100);
                                         }
                                     @endphp
 
@@ -118,7 +118,8 @@
                                                 if( $invoices_paid==0)
                                                     echo $invoices_paid=0;
                                                 else
-                                                    echo $invoices_paid/$count_all*100;
+
+                                                    echo round( $invoices_paid/$count_all*100);
                                                 @endphp
                                             </span>
 										</span>
@@ -159,7 +160,7 @@
 
                                                 else
 
-                                                   echo $invoice_part_paid/$count_all*100;
+                                                   echo round( $invoice_part_paid/$count_all*100);
 
 
                                                 @endphp

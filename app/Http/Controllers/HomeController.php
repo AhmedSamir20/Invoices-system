@@ -7,10 +7,6 @@ use App\Models\Invoice;
 class HomeController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
 
     public function index()
@@ -24,19 +20,19 @@ class HomeController extends Controller
         if ($count_invoices2 == 0) {
             $nspainvoices2 = 0;
         } else {
-            $nspainvoices2 = $count_invoices2 / $count_all * 100;
+            $nspainvoices2 = round($count_invoices2 / $count_all * 100);
         }
 
         if ($count_invoices1 == 0) {
             $nspainvoices1 = 0;
         } else {
-            $nspainvoices1 = $count_invoices1 / $count_all * 100;
+            $nspainvoices1 = round($count_invoices1 / $count_all * 100);
         }
 
         if ($count_invoices3 == 0) {
             $nspainvoices3 = 0;
         } else {
-            $nspainvoices3 = $count_invoices3 / $count_all * 100;
+            $nspainvoices3 =round( $count_invoices3 / $count_all * 100);
         }
 
 

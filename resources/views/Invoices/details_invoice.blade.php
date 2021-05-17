@@ -146,7 +146,7 @@
                                                             @endif
                                                             <td>{{ $x->Payment_Date }}</td>
                                                             <td>{{ $x->note }}</td>
-                                                            <td>{{ $x->created_at }}</td>
+                                                            <td>{{ $x->created_at->diffForHumans() }}</td>
                                                             <td>{{ $x->user }}</td>
                                                         </tr>
                                                     @endforeach

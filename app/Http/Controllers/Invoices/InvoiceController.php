@@ -9,6 +9,7 @@ use App\Models\Invoice_attachment;
 use App\Models\Invoice_detail;
 use App\Models\Section;
 use App\Notifications\AddInvoice;
+use App\Notifications\UserNotification;
 use App\User;
 use Auth;
 use DB;
@@ -106,8 +107,18 @@ class InvoiceController extends Controller
             $request->pic->move(public_path('Attachments/' . $invoice_number), $imageName);
         }
         //send mail
-         $user = User::first();
-         Notification::send($user, new AddInvoice($invoice_id));
+//         $user = User::first();
+//         Notification::send($user, new AddInvoice($invoice_id));
+//
+        // if you want send notification all user
+        //$user = User::get();
+        // if you want send notification user for user add invoices
+        //$user = User::find(Auth::user()->id);
+        $user = User::get();
+        $invoices = Invoice::latest()->first();
+        Notification::send($user, new UserNotification($invoices));
+
+
 
         session()->flash('Add');
         return redirect()->route('invoices.index');
@@ -271,6 +282,19 @@ class InvoiceController extends Controller
     public function export()
     {
         return Excel::download(new InvoicesExport, 'invoices.xlsx');
+    }
+
+    public function MarkAsRead_all (Request $request)
+    {
+
+        $userUnreadNotification= auth()->user()->unreadNotifications;
+
+        if($userUnreadNotification) {
+            $userUnreadNotification->markAsRead();
+            return back();
+        }
+
+
     }
 
 }
